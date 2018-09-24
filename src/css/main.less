@@ -1,0 +1,34 @@
+@w:200px;
+
+.box(@w:100px,@h:100px,@bw:1px){
+    width: @w;
+    height: @h;
+    border: @bw solid gold;
+}
+
+.box1{
+    width: @w;
+    height: @w;
+    background-color: gold;
+}
+
+.box2{
+    .box(200px,300px,2px);
+    color: red;
+    transition: all 1s ease;
+    transform: rotate(30deg);
+}
+
+.list{
+    list-style: none;
+    li{
+        height: @w;
+        background-color: gold;
+        a{
+            float: left;
+            &:hover{
+                color: red;
+            }
+        }
+    }
+}
